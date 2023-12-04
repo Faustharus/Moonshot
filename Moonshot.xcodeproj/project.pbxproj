@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E3A67FB2B1D1BDE00701588 /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3A67FA2B1D1BDE00701588 /* Astronaut.swift */; };
+		9E3A67FD2B1D1C0800701588 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3A67FC2B1D1C0800701588 /* Bundle-Decodable.swift */; };
+		9E3A67FF2B1D1D7400701588 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3A67FE2B1D1D7400701588 /* Mission.swift */; };
+		9E84D0742B1E10D30043226E /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E84D0732B1E10D30043226E /* missions.json */; };
+		9E84D0762B1E1ACE0043226E /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84D0752B1E1ACE0043226E /* Color-Theme.swift */; };
 		9E8A2A3C2B1BA0FC00E49734 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A2A3B2B1BA0FC00E49734 /* MoonshotApp.swift */; };
 		9E8A2A3E2B1BA0FC00E49734 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A2A3D2B1BA0FC00E49734 /* ContentView.swift */; };
 		9E8A2A402B1BA0FD00E49734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8A2A3F2B1BA0FD00E49734 /* Assets.xcassets */; };
 		9E8A2A432B1BA0FD00E49734 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8A2A422B1BA0FD00E49734 /* Preview Assets.xcassets */; };
+		9E8A2A4C2B1BA11F00E49734 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E8A2A4A2B1BA11F00E49734 /* astronauts.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E3A67FA2B1D1BDE00701588 /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
+		9E3A67FC2B1D1C0800701588 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		9E3A67FE2B1D1D7400701588 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		9E84D0732B1E10D30043226E /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = missions.json; path = ../../../HackingWithSwift/SwiftUI/project8/Moonshot/missions.json; sourceTree = "<group>"; };
+		9E84D0752B1E1ACE0043226E /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 		9E8A2A382B1BA0FC00E49734 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8A2A3B2B1BA0FC00E49734 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		9E8A2A3D2B1BA0FC00E49734 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9E8A2A3F2B1BA0FD00E49734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E8A2A422B1BA0FD00E49734 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9E8A2A4A2B1BA11F00E49734 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +44,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E84D0772B1E21EF0043226E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E3A67FC2B1D1C0800701588 /* Bundle-Decodable.swift */,
+				9E84D0752B1E1ACE0043226E /* Color-Theme.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9E84D0782B1E22090043226E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E3A67FA2B1D1BDE00701588 /* Astronaut.swift */,
+				9E3A67FE2B1D1D7400701588 /* Mission.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9E8A2A2F2B1BA0FC00E49734 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +83,10 @@
 			children = (
 				9E8A2A3B2B1BA0FC00E49734 /* MoonshotApp.swift */,
 				9E8A2A3D2B1BA0FC00E49734 /* ContentView.swift */,
+				9E84D0782B1E22090043226E /* Models */,
+				9E84D0772B1E21EF0043226E /* Extensions */,
+				9E8A2A4A2B1BA11F00E49734 /* astronauts.json */,
+				9E84D0732B1E10D30043226E /* missions.json */,
 				9E8A2A3F2B1BA0FD00E49734 /* Assets.xcassets */,
 				9E8A2A412B1BA0FD00E49734 /* Preview Content */,
 			);
@@ -126,7 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E8A2A432B1BA0FD00E49734 /* Preview Assets.xcassets in Resources */,
+				9E84D0742B1E10D30043226E /* missions.json in Resources */,
 				9E8A2A402B1BA0FD00E49734 /* Assets.xcassets in Resources */,
+				9E8A2A4C2B1BA11F00E49734 /* astronauts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E3A67FB2B1D1BDE00701588 /* Astronaut.swift in Sources */,
+				9E84D0762B1E1ACE0043226E /* Color-Theme.swift in Sources */,
 				9E8A2A3E2B1BA0FC00E49734 /* ContentView.swift in Sources */,
 				9E8A2A3C2B1BA0FC00E49734 /* MoonshotApp.swift in Sources */,
+				9E3A67FF2B1D1D7400701588 /* Mission.swift in Sources */,
+				9E3A67FD2B1D1C0800701588 /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,8 +318,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +327,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = chailloleau.damien.Moonshot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,8 +350,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +359,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = chailloleau.damien.Moonshot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
