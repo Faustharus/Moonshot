@@ -9,53 +9,41 @@ import SwiftUI
 
 struct ContentView: View {
     
-    //let astronauts: [String: Astronaut] = Bundle.main.decodeFile("astronauts.json")
+    let astronauts: [String: Astronaut] = Bundle.main.decodeFile("astronauts.json")
     let missions: [Mission] = Bundle.main.decodeFile("missions.json")
     
     let columns = [
         GridItem(.adaptive(minimum: 150))
     ]
     
+    @State private var changeViewStyle: Bool = false
+    
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 30) {
-                    ForEach(missions) { mission in
-                        NavigationLink {
-                            Text("Detail View")
-                        } label: {
-                            VStack {
-                                Image(mission.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .padding()
-                                
-                                VStack {
-                                    Text(mission.displayName)
-                                        .font(.headline)
-                                        .foregroundStyle(.white)
-                                    Text(mission.formattedLaunchDate)
-                                        .font(.subheadline.italic())
-                                        .foregroundStyle(.white.opacity(0.7))
-                                }
-                                .padding(.vertical)
-                                .frame(maxWidth: .infinity)
-                                .background(.lightBackground)
-                            }
-                            .clipShape(.rect(cornerRadius: 10))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.lightBackground)
-                            )
+            VStack {
+                if changeViewStyle {
+                    List {
+                        CardListView()
+                    }
+                } else {
+                    ScrollView {
+                        LazyVGrid(columns: columns, spacing: 30) {
+                            CardView()
                         }
+                        .padding([.bottom, .horizontal])
                     }
                 }
-                .padding([.bottom, .horizontal])
             }
             .navigationTitle("Moonshot")
             .background(.darkBackground)
             .preferredColorScheme(.dark)
+            .toolbar {
+                Button {
+                    self.changeViewStyle.toggle()
+                } label: {
+                    Label("Switch View", systemImage: "arrow.circlepath")
+                }
+            }
         }
     }
 }
@@ -64,3 +52,9 @@ struct ContentView: View {
     ContentView()
         .preferredColorScheme(.dark)
 }
+
+
+//LazyVGrid(columns: columns, spacing: 30) {
+//    
+//}
+//.padding([.bottom, .horizontal])
