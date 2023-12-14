@@ -23,18 +23,25 @@ struct ContentView: View {
             VStack {
                 if changeViewStyle {
                     List {
-                        CardListView()
+                        ForEach(missions) { mission in
+                            CardListView(mission: mission, image: mission.image, displayName: mission.displayName, formattedLaunchDate: mission.formattedLaunchDate)
+                        }
                     }
                 } else {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 30) {
-                            CardView()
+                            ForEach(missions) { mission in
+                                CardView(mission: mission, image: mission.image, displayName: mission.displayName, formattedLaunchDate: mission.formattedLaunchDate)
+                            }
                         }
                         .padding([.bottom, .horizontal])
                     }
                 }
             }
             .navigationTitle("Moonshot")
+            .navigationDestination(for: Mission.self, destination: { selected in
+                MissionView(mission: selected, astronauts: astronauts)
+            })
             .background(.darkBackground)
             .preferredColorScheme(.dark)
             .toolbar {
@@ -52,9 +59,3 @@ struct ContentView: View {
     ContentView()
         .preferredColorScheme(.dark)
 }
-
-
-//LazyVGrid(columns: columns, spacing: 30) {
-//    
-//}
-//.padding([.bottom, .horizontal])
